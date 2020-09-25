@@ -1,0 +1,20 @@
+@import
+  "scss/assets/variables",
+  "scss/assets/fonts",
+  "scss/assets/mixins";
+
+@import
+  "scss/base/base";
+
+@import
+  "scss/layouts/container/container",
+  "scss/layouts/wrapper/wrapper",
+  "scss/layouts/header/header",
+  "scss/layouts/section/section",
+  "scss/blocks/icon/icon",
+  "scss/layouts/nav/nav";
+
+@import
+  "scss/blocks/btn/btn",
+  "scss/blocks/form-inline/form-inline",
+  "scss/blocks/carousel/carousel";

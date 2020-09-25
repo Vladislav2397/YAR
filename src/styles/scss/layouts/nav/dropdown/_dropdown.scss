@@ -1,0 +1,64 @@
+.dropdown {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 250px auto;
+  grid-template-rows: 400px;
+  height: 100%;
+  grid-gap: 5px;
+  overflow: hidden;
+  transition: 0.5s;
+
+  &--hidden {
+    height: 0;
+  }
+
+  &__section:last-child {
+    padding-left: 5px;
+  }
+
+  &__links {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background: $white;
+    align-items: center;
+    overflow-y: scroll;
+  }
+
+  &__link {
+    display: flex;
+    width: 100%;
+    padding: 13px 0;
+    border-bottom: 1px solid  $gray;
+    flex-direction: row;
+    align-items: center;
+    font-size: $font-sm;
+    position: relative;
+
+    &:hover {
+      color: $orange;
+
+      &::after {
+        border-left: 5px solid $orange;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 10px;
+      border: 5px solid transparent;
+      border-left: 5px solid $gray;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+  }
+}

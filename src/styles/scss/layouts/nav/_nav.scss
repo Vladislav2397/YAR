@@ -1,0 +1,8 @@
+.nav {
+  display: grid;
+  grid-gap: 5px;
+
+  @import
+    "navbar/navbar",
+    "dropdown/dropdown";
+}
