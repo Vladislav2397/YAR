@@ -1,0 +1,14 @@
+mixin achivements__item(imageSrc, title, content)
+  .achivements__item
+    img.achivements__image.icon(src=imageSrc, alt="image")
+    .achivements__content
+      .achivements__title.text--sm.text--800=title
+      .achivements__text.text--silver=content
+
+.achivements.text--xs
+  each item in achievementsItems
+    +achivements__item(
+      item.imageSrc,
+      item.title,
+      item.content
+    )

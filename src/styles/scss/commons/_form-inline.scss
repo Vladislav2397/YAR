@@ -1,0 +1,25 @@
+.form-inline {
+  display: flex;
+  flex-direction: row;
+  border-radius: 2px;
+  overflow: hidden;
+
+  &__field {
+    border-radius: 0;
+    border: none;
+    padding: 5px 10px;
+    width: 350px;
+    font-size: inherit;
+    font-weight: 100;
+    letter-spacing: normal;
+    color: $dark;
+
+    &:focus {
+      color: $black;
+    }
+
+    &--sm {
+      width: 275px;
+    }
+  }
+}

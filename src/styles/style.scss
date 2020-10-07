@@ -7,14 +7,22 @@
   "scss/base/base";
 
 @import
-  "scss/layouts/container/container",
-  "scss/layouts/wrapper/wrapper",
-  "scss/layouts/header/header",
-  "scss/layouts/section/section",
-  "scss/blocks/icon/icon",
-  "scss/layouts/nav/nav";
+  "scss/layouts/container",
+  "scss/layouts/section",
+  "scss/layouts/nav";
 
 @import
-  "scss/blocks/btn/btn",
-  "scss/blocks/form-inline/form-inline",
-  "scss/blocks/carousel/carousel";
+  "scss/commons/header",
+  "scss/commons/btn",
+  "scss/commons/form-inline",
+  "scss/commons/text",
+  "scss/commons/footer";
+
+@import
+  "scss/blocks/carousel",
+  "scss/blocks/news",
+  "scss/blocks/achivements",
+  "scss/blocks/products",
+  "scss/blocks/sponsors",
+  "scss/blocks/mailing",
+  "scss/blocks/categories";

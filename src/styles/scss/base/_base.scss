@@ -3,15 +3,48 @@
   margin: 0;
   box-sizing: border-box;
   font-size: 10px;
-  font-family: sans-serif;
+  font-family: $main-font-family;
+  color: #000;
 }
 
-i, p, a, b {
+i, p, a, b, div {
   font-size: inherit;
   color: inherit;
+  align-items: center;
 }
 
 a {
-  color: #000;
   text-decoration: none;
+  color: inherit;
+}
+
+h6 {
+  font-size: $font-sm;
+}
+
+body {
+  position: relative;
+  background: $light;
+  z-index: -1;
+  overflow-x: hidden;
+
+  &::after, &::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: 2px solid $orange;
+    background: $dark;
+  }
+
+  &::after {
+    top: 0;
+    height: 110px;
+  }
+
+  &::before {
+    bottom: 0;
+    height: 400px;
+  }
 }

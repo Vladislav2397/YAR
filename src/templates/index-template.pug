@@ -1,4 +1,14 @@
 extends doctype
 
 block body
-  block content
+  .container
+    include pages/mixins/objects
+
+    include includes/header
+    include includes/nav
+    include includes/categories
+
+    block content
+
+    include includes/mailing
+    include includes/footer

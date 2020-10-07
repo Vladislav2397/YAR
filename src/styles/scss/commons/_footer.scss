@@ -1,0 +1,37 @@
+.footer {
+  display: grid;
+  grid-template-rows: auto auto;
+  width: 100%;
+
+  &__links {
+    background: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 20px;
+  }
+
+  &__license {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  &__section {
+    display: grid;
+  }
+
+  &__link {
+    text-decoration: underline;
+  }
+
+  &__phone-link {
+    border-bottom: 1px dashed $dark;
+  }
+
+  &__socials {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- My CSS style-->
+    <link rel="stylesheet" href="public/css/style.min.css">
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <!-- Vue-->
+    <script src="public/libs/vue.min.js"></script>
+    <title>Product detail</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header text--white text--md">
+        <div class="header__section">
+          <div class="header__brand"><img class="header__logo" src="" alt="Brand"></div>
+        </div>
+        <div class="header__section">
+          <form class="form-inline text--lg">
+            <input class="form-inline__field" type="text" placeholder="Более 10 000 товаров...">
+            <button class="btn btn--orange-theme"><i class="fas fa-search"></i></button>
+          </form>
+        </div>
+        <div class="header__section">
+          <div class="header__links"><a class="header__link" href="#"><i class="fas fa-percent text--green"></i>
+              <p>Акции</p></a><a class="header__link" href="#"><i class="fas fa-user text--orange"></i>
+              <p>Личный кабинет</p></a></div>
+        </div>
+        <div class="header__section header__phones text--md">
+          <div class="header__phone text--600"><i class="fas fa-phone text--orange"></i><a class="header__phone" href="tel:89005554466">&nbsp;8 900 555 44 66</a><i class="fab fa-whatsapp text--green"></i><a class="header__phone" href="tel:89005556644">&nbsp;8 900 555 66 44</a></div><a class="header__btn text--300" href="#"><i class="fas fa-phone text--orange"></i>
+            <p>&nbsp;Заказать звонок</p></a>
+        </div>
+      </div>
+      <nav class="section section--250-auto nav text--md text--white" id="nav">
+        <div class="btn btn--black-theme btn--no-padding section__item nav__section nav__menu" @click="catalogToggle"><i class="fas fa-bars nav__icon"></i>
+          <p class="text--600">Каталог товаров</p>
+        </div>
+        <div class="section__item nav__section">
+          <div class="nav__links"><a class="nav__link" href="#">Доставка и оплата</a><a class="nav__link" href="#">Сервис и поддержка</a><a class="nav__link" href="#">Контакты</a></div>
+          <div class="btn btn--orange-theme btn--no-padding nav__cart" id="cart"><i class="fas fa-shopping-cart nav__icon"></i>
+            <div class="nav__content">
+              <p>Корзина покупок</p>
+              <p><b>Итого: </b>{{ countItems }} ({{ price }}руб)</p>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="nav-tree text--sm text--gray">Главная/Каталог/Облицовочный кирпич КРАСНЫЙ гладкий 1,4 NF - Braer</div>
+      <div class="section mailing text--white">
+        <div class="mailing__section"><i class="fas fa-envelope mailing__icon text--orange"></i>
+          <div class="mailing__title text--title-sm text--800">Подпишитесь на рассылку!</div>
+          <div class="text--lg text--600">Вы будете первыми узнавать о новых акциях и распродажах.</div>
+        </div>
+        <div class="mailing__section">
+          <form class="form-inline text--md">
+            <input class="form-inline__field form-inline__field--sm" type="email" placeholder="Ваш e-mail">
+            <button class="btn btn--orange-theme btn--lg">Подписаться</button>
+          </form>
+        </div>
+      </div>
+      <div class="section footer">
+        <div class="footer__links text--sm">
+          <div class="footer__links__section"><img class="footer__links__logo" src="" alt="brand"></div>
+          <div class="footer__section">
+            <div class="footer__header text--md text--600">О компании</div><a class="footer__link text--dark" href="#">Контакты</a><a class="footer__link text--dark" href="#">Производители</a>
+          </div>
+          <div class="footer__section">
+            <div class="footer__header text--md text--600">Покупателям</div><a class="footer__link text--dark" href="#">Доставка</a><a class="footer__link text--dark" href="#">Оплата</a><a class="footer__link text--dark" href="#">Отзывы</a><a class="footer__link text--dark" href="#">Прайслист</a>
+          </div>
+          <div class="footer__section">
+            <div class="footer__header text--md text--600">Полезная информация</div><a class="footer__link text--dark" href="#">Советы по ремонту</a><a class="footer__link text--dark" href="#">Строительныe калькуляторы</a>
+          </div>
+          <div class="footer__section">
+            <div class="footer__links__header text--md text--600">Контакты</div><a class="footer__links__phone text--title-sm text--600" href="tel:89005554466">8 900 555 44 66</a>
+            <div class="phone"><i class="fas fa-phone footer__phone-icon"></i><a class="footer__phone-link" href="#">Заказать звонок</a></div>
+            <div class="footer__socials text--title-md">
+              <div class="fab fa-facebook"></div>
+              <div class="fab fa-vk"></div>
+              <div class="fab fa-instagram"></div>
+              <div class="fab fa-youtube"></div>
+              <div class="fab fa-odnoklassniki"></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__license text--sm text--gray">
+          <p>Все права защищены &copy; 2020 г. | ОГРН ИП 12345678987654321</p><a class="footer__link">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+    <script src="public/js/main.min.js"></script>
+    <script src="public/libs/vue.min.js"></script>
+  </body>
+</html>

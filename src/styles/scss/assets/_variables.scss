@@ -1,12 +1,21 @@
-$dark: #3c3c3c;
+$dark: #363A3C;
 $light: #e1e1e1;
 $white: #fff;
 $black: #000;
 $gray: #ccc;
+$dark-gray: #888;
+$silver: #afafaf;
 $yellow: #ebb82b;
-$orange: #ff810b;
+$orange: #da871b;
+$red: #fa4a41;
 $orange-gradient: linear-gradient(90deg, $yellow, $orange);
 $green: #82e043;
+
+$main-font-family: 'Open Sans', sans-serif;
+
+$font-title-lg: 3rem;
+$font-title-md: 2.6rem;
+$font-title-sm: 2.2rem;
 
 $font-xl: 2rem;
 $font-lg: 1.8rem;

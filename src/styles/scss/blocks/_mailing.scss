@@ -1,0 +1,25 @@
+.mailing {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin: 40px 0;
+
+  &__section {
+    &:first-child {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+    }
+  }
+
+  &__icon {
+    grid-row: span 2;
+    margin-right: 15px;
+    font-size: 5rem;
+  }
+
+  &__title {
+    line-height: 1.1; 
+  }
+}

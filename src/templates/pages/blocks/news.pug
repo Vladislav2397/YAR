@@ -1,0 +1,17 @@
+mixin items-news__item(title, imageSrc, pubDate)
+  a.news__item(href="#")
+    .news__title=title
+    .news__content
+      img.news__image(src=imageSrc, alt="image")
+      .news__pub-date=pubDate
+      .news__link-detail Подробнее >>
+
+
+.news__header Наши новости
+.news__items
+  each item in newsItems
+    +items-news__item(
+      item.title,
+      item.imageSrc,
+      item.pubDate
+    )

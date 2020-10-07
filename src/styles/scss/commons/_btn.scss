@@ -1,0 +1,47 @@
+%base {
+  cursor: pointer;
+  border: none;
+  background: $gray;
+  color: $white;
+  font-size: inherit;
+}
+
+.btn {
+  @extend %base;
+  padding: 5px 10px;
+
+  &--orange-theme {
+    background: $orange-gradient;
+
+    &:hover {
+      background: $orange;
+    }
+  }
+
+  &--light-theme {
+    background: $gray;
+    color: $black;
+
+    &:hover {
+      background: $orange;
+      color: $white;
+    }
+  }
+
+  &--black-theme {
+    background: $black;
+    color: $white;
+
+    &:hover {
+      background: $dark;
+    }
+  }
+
+  &--no-padding {
+    padding: 0;
+  }
+
+  &--lg {
+    padding: 5px 15px;
+  }
+}

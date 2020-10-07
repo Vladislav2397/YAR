@@ -1,0 +1,6 @@
+@mixin grid_display($temp_col: auto, $temp_row: auto, $gap: 0) {
+  display: grid;
+  grid-template-columns: $temp_col;
+  grid-template-rows: $temp_row;
+  grid-gap: $gap;
+}

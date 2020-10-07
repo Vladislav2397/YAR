@@ -1,0 +1,27 @@
+mixin carousel__item(imageSrc)
+  .carousel__item
+    img.carousel__image(src=imageSrc, alt="image")
+
+mixin categories__link(imageSrc, text, link)
+  a.categories__link(href=link)
+    img.categories__icon(src=imageSrc, alt="icon")
+    p=text
+
+.section.section--250-auto.text--sm
+  .section__item.categories
+    each item in categoryItems
+      +categories__link(
+        item.imageSrc,
+        item.text,
+        item.link
+      )
+
+  .section__item.carousel
+    .carousel__gallery
+      each item in carouselItems
+        +carousel__item(item)
+
+    .carousel__counters
+      each item in carouselItems
+        .carousel__counter
+    

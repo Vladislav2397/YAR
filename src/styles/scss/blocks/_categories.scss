@@ -1,0 +1,62 @@
+.categories {
+  height: 100%;
+  background: $white;
+  position: relative;
+
+  &__section:last-child {
+    padding-left: 5px;
+  }
+
+  &__links {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background: $white;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: visible;
+  }
+
+  &__link {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding: 13px 0;
+    border-bottom: 1px solid  $gray;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    transition: 0.3s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      border: 5px solid transparent;
+      border-left: 5px solid $gray;
+    }
+
+    &:hover {
+      color: $orange;
+
+      &::after {
+        border-left: 5px solid $orange;
+      }
+
+      .categories__dropdown {
+        display: block;
+        z-index: 100;
+      }
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+}

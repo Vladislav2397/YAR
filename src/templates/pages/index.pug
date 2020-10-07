@@ -3,117 +3,53 @@ extends ../index-template
 block variables
   - var page_title = "Home";
 
+include mixins/products
+
 block content
-  .container
 
-    .header
-      .header__section
-        .header__brand
-          img.header__logo(src="", alt="Brand")
+  .section.section--250-auto
+    .section__item.news
+      include blocks/news
 
-      .header__section
-        form.header__form.form-inline
-          input.form-inline__field(type="text" placeholder="Более 10 000 товаров...")
-          button.form-inline__btn.btn
-            i.fas.fa-search
+    .section__item
+      include blocks/achievements
 
-      .header__section
-        .header__links.links-header
-          a.links-header__link(href="#")
-            i.fas.fa-percent.links-header__icon.icon--green
-            p.links-header__text Акции
-          a.links-header__link(href="#")
-            i.fas.fa-user.links-header__icon.icon--orange
-            p.links-header__text Личный кабинет
+      .products.products--inline
+        +products__header('Товары месяца')
+        .products__items
+          .products__pane
+            each item in productItems
+              .products__item
+                +product__item(
+                  item.vendor,
+                  item.imageSrc,
+                  item.link,
+                  item.commentsCount,
+                  item.title,
+                  item.oldPrice,
+                  item.price
+                )
 
-      .header__section
-        .header__phone.phone-header
-          .phone-header__section
-            i.fas.fa-phone.icon--orange
-            p.phone-header__phone 8 900 555 44 66
-            i.fab.fa-whatsapp.icon--green
-            p.phone-header__phone 8 900 555 66 44
-          a.phone-header__section(href="#")
-            i.fas.fa-phone.icon--orange
-            p.phone-header__link Заказать звонок
+      .products.products--inline
+        +products__header('Новые поступления')
+        .products__items
+          .products__pane
+            each item in productItems
+              .products__item
+                +product__item(
+                  item.vendor,
+                  item.imageSrc,
+                  item.link,
+                  item.commentsCount,
+                  item.title,
+                  item.oldPrice,
+                  item.price
+                )
 
-    .nav#nav
-
-      nav.navbar
-        button.btn.navbar__section.navbar__menu(@click="dropdownToggle")
-          i.fas.fa-bars.nav__icon
-          p Каталог товаров
-        .navbar__section.navbar__links
-          a.navbar__link(href="#") Доставка и оплата
-          a.navbar__link(href="#") Сервис и поддержка
-          a.navbar__link(href="#") Контакты
-        button.btn.navbar__section.navbar__cart
-          i.fas.fa-shopping-cart.navbar__icon
-          div.navbar__content
-            p Корзина покупок
-            p
-              b Итого: 
-              | 0 (0руб)
-
-      .dropdown(:class="{ 'dropdown--hidden' : !dropdownCatalogShow }")
-        .dropdown__section.dropdown__links
-          a.dropdown__link(href="#")
-            img.dropdown__icon(src="", alt="icon")
-            p Электрика
-          a.dropdown__link(href="#")
-            img.dropdown__icon(src="", alt="icon")
-            p Отопление
-          a.dropdown__link(href="#")
-            img.dropdown__icon(src="", alt="icon")
-            p Водоснабжение
-          a.dropdown__link(href="#")
-            img.dropdown__icon(src="", alt="icon")
-            p Сантехника
-          a.dropdown__link(href="#")
-            img.dropdown__icon(src="", alt="icon")
-            p Крепеж
-          a.dropdown__link(href="#")
-            img.dropdown__icon(src="", alt="icon")
-            p Сухие смеси
-          a.dropdown__link(href="#")
-            img.dropdown__icon(src="", alt="icon")
-            p Электрика
-          a.dropdown__link(href="#")
-            img.dropdown__icon(src="", alt="icon")
-            p Отопление
-          a.dropdown__link(href="#")
-            img.dropdown__icon(src="", alt="icon")
-            p Водоснабжение
-          a.dropdown__link(href="#")
-            img.dropdown__icon(src="", alt="icon")
-            p Сантехника
-          a.dropdown__link(href="#")
-            img.dropdown__icon(src="", alt="icon")
-            p Крепеж
-          a.dropdown__link(href="#")
-            img.dropdown__icon(src="", alt="icon")
-            p Сухие смеси
-
-        .dropdown__section.carousel#carousel
-          .carousel__gallery
-            .carousel__item
-              img.carousel__image(src="", alt="image")
-            .carousel__item
-              img.carousel__image(src="", alt="image")
-            .carousel__item
-              img.carousel__image(src="", alt="image")
-
-          .carousel__counters
-            .btn.carousel__counter.carousel__counter--active
-            .btn.carousel__counter
-            .btn.carousel__counter
-
-    .section
-      h1 Text
-      h2 Text
-      h3 Text
-      h4 Text
-      h5 Text
-      h6 Text
-
-    .section
+      .products.products--inline
+        +products__header('Производители')
+        .products__items
+          .sponsors
+            - for (var i = 0; i < 20; i++)
+              .sponsors__item
+                img.sponsors__image(src="public/img/100.png", alt="image")

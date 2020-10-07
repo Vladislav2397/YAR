@@ -1,0 +1,13 @@
+extends ../index-template
+
+block variables
+  - var page_title = "Catalog";
+
+block content
+
+  .section.grid__2col
+    .grid__section
+      include blocks/filters
+      include blocks/news
+    
+    .grid__section

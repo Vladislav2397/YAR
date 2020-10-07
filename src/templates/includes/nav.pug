@@ -1,0 +1,19 @@
+nav.section.section--250-auto.nav.text--md.text--white#nav
+
+  .btn.btn--black-theme.btn--no-padding.section__item.nav__section.nav__menu(@click="catalogToggle")
+    i.fas.fa-bars.nav__icon
+    p.text--600 Каталог товаров
+
+  .section__item.nav__section
+    .nav__links
+      a.nav__link(href="#") Доставка и оплата
+      a.nav__link(href="#") Сервис и поддержка
+      a.nav__link(href="#") Контакты
+
+    .btn.btn--orange-theme.btn--no-padding.nav__cart#cart
+      i.fas.fa-shopping-cart.nav__icon
+      div.nav__content
+        p Корзина покупок
+        p
+          b Итого: 
+          | {{ countItems }} ({{ price }}руб)

@@ -1,0 +1,28 @@
+.text {
+
+  // * Colors
+  &--orange { color: $orange }
+  &--green { color: $green }
+  &--white { color: $white }
+  &--red { color: $red }
+  &--gray { color: $gray }
+  &--silver { color: $silver }
+  &--dark { color: $dark }
+  &--dark-gray { color: $dark-gray }
+
+  // * Size
+  &--title-lg { font-size: $font-title-lg }
+  &--title-md { font-size: $font-title-md }
+  &--title-sm { font-size: $font-title-sm }
+  &--xl { font-size: $font-xl }
+  &--lg { font-size: $font-lg }
+  &--md { font-size: $font-md }
+  &--sm { font-size: $font-sm }
+  &--xs { font-size: $font-xs }
+
+  // * Weight
+  &--800 { font-weight: 800 }
+  &--600 { font-weight: 600 }
+  &--400 { font-weight: 400 }
+  &--300 { font-weight: 300 }
+}
